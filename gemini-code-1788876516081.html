@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>world-of-tech</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:Arial,Helvetica,sans-serif;color:#17213a}
+body{
+  background:linear-gradient(180deg,#eef0ff 0%,#e5ebff 100%);
+}
+.page{width:100%;max-width:390px;margin:auto;padding:18px 17px 16px}
+.brand{font-size:15px;font-weight:700;margin:3px 2px 25px}
+.brand span{color:#1255c9}
+.hero{
+  border-radius:27px;
+  padding:21px 18px 18px;
+  background:linear-gradient(145deg,#f8f8ff 0%,#e9eeff 67%,#fff9d9 100%);
+  border:1px solid rgba(255,255,255,.9);
+}
+.badge{
+  display:inline-flex;align-items:center;background:#ffdb32;
+  border-radius:14px;padding:5px 13px;color:#17213a;
+  font-size:10px;font-weight:800;letter-spacing:1px
+}
+h1{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:29px;line-height:1.12;letter-spacing:-.5px;
+  margin:17px 2px 11px;font-weight:700
+}
+h1 span{color:#0756cc}
+.sub{font-size:13.5px;line-height:1.58;color:#66728c;margin:0 2px 18px}
+
+/* Primary CTA Button (Converted to Link) */
+.primary{
+  width:100%;height:65px;border:0;border-radius:22px;
+  background:linear-gradient(180deg, #1258d4 0%, #0e48af 100%);
+  color:white;font-size:16px;font-weight:700;
+  cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  text-decoration:none;
+  position:relative;
+  transition:transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  animation:pulse-blue-halo 2.4s infinite ease-in-out;
+}
+.primary .spark{font-size:19px;vertical-align:-1px;margin-right:7px}
+.primary .arrow{font-size:18px;margin-left:8px;font-weight:400}
+
+@keyframes pulse-blue-halo {
+  0% {
+    box-shadow: 0 12px 23px rgba(16,84,201,.27), 0 0 10px rgba(16, 84, 201, 0.2);
+  }
+  50% {
+    box-shadow: 0 12px 23px rgba(16,84,201,.27), 0 0 28px 8px rgba(16, 84, 201, 0.45);
+  }
+  100% {
+    box-shadow: 0 12px 23px rgba(16,84,201,.27), 0 0 10px rgba(16, 84, 201, 0.2);
+  }
+}
+
+.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 28px rgba(16,84,201,.35), 0 0 32px 10px rgba(16, 84, 201, 0.5);
+  animation-play-state: paused;
+}
+.primary:active {
+  transform: translateY(1px);
+  box-shadow: 0 6px 16px rgba(16,84,201,.3), 0 0 14px 4px rgba(16, 84, 201, 0.3);
+}
+
+.claimed{
+  height:37px;margin-top:14px;border-radius:20px;
+  background:rgba(225,231,249,.8);display:flex;align-items:center;
+  padding:0 13px;font-size:10px;color:#68748c
+}
+.dot{width:10px;height:10px;border-radius:50%;background:#ffda2f;margin-right:8px;box-shadow:0 0 0 5px rgba(255,218,47,.15);flex-shrink:0;}
+
+.works{
+  margin-top:20px;background:rgba(249,250,255,.75);
+  border:1px solid rgba(255,255,255,.9);border-radius:27px;
+  padding:21px 18px 18px
+}
+.works-title{font-size:13px;letter-spacing:1.5px;color:#1054c9;font-weight:700;margin-bottom:16px}
+.step{display:flex;align-items:center;gap:11px;min-height:45px}
+.num{
+  width:30px;height:30px;flex:0 0 30px;border-radius:50%;
+  background:#1054c9;color:#fff;display:grid;place-items:center;font-size:13px;font-weight:700
+}
+.step:nth-child(4) .num{background:#ffda2f;color:#17213a}
+.step-text{font-size:13px;color:#27324a}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:21px}
+.stat{
+  height:81px;background:rgba(249,250,255,.82);
+  border:1px solid rgba(255,255,255,.9);border-radius:20px;padding:17px 15px
+}
+.stat strong{font-family:Georgia,"Times New Roman",serif;font-size:18px}
+.stat p{font-size:10px;color:#69758d;margin:8px 0 0;line-height:1.25}
+.members{
+  display:flex;align-items:center;margin-top:17px;padding:0 3px
+}
+.avatars{display:flex;align-items:center;min-width:103px}
+.avatar{
+  width:30px;height:30px;border-radius:50%;display:grid;place-items:center;
+  font-size:8px;border:1.5px solid #edf0ff;margin-left:-6px
+}
+.avatar:first-child{margin-left:0}
+.a1{background:#eef0f6}.a2{background:#ffda2f}.a3{background:#5683ed;color:#fff}
+.a4{background:#d9dff0}.a5{background:#ffda2f}.a6{background:#1158ca;color:#fff}
+.member-copy{font-size:11px;line-height:1.35;color:#44506a}
+.member-copy strong{font-weight:400}
+.disclaimer{text-align:center;color:#929cb0;font-size:8.5px;margin:17px 0 18px}
+.bottom{
+  background:rgba(250,251,255,.92);border:1px solid rgba(255,255,255,.95);
+  border-radius:21px;padding:10px
+}
+
+/* Bottom CTA Link */
+.bottom a{
+  width:100%;height:54px;border:0;border-radius:18px;
+  background:linear-gradient(180deg, #ffe14d 0%, #ebd028 100%);
+  color:#17213a;font-size:14px;font-weight:700;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  text-decoration:none;
+  transition:transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  animation:pulse-yellow-halo 2.4s infinite ease-in-out;
+}
+.bottom .spark{font-size:18px;margin-right:7px}
+.bottom .arrow{font-size:17px;margin-left:7px}
+
+@keyframes pulse-yellow-halo {
+  0% {
+    box-shadow: 0 4px 12px rgba(255, 218, 53, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 24px 6px rgba(255, 218, 53, 0.5);
+  }
+  100% {
+    box-shadow: 0 4px 12px rgba(255, 218, 53, 0.25);
+  }
+}
+
+.bottom a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 28px 8px rgba(255, 218, 53, 0.6);
+  animation-play-state: paused;
+}
+.bottom a:active {
+  transform: translateY(1px);
+  box-shadow: 0 0 12px 3px rgba(255, 218, 53, 0.35);
+}
+
+@media(max-width:360px){
+  .page{padding-left:13px;padding-right:13px}
+  h1{font-size:26px}
+  .hero{padding-left:16px;padding-right:16px}
+  .works{padding-left:16px;padding-right:16px}
+  .member-copy{font-size:10px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="brand">world-of-<span>tech</span></div>
+
+  <section class="hero">
+    <div class="badge">SCRATCH &amp; WIN</div>
+    <h1>Up to <span>$1,000</span> toward<br>your next Best Buy haul</h1>
+    <p class="sub">One tap reveals your reward. Real gift-card credit, no purchase needed. Your number is already waiting.</p>
+
+    <a class="primary cta-btn" href="https://trksy.org/aff_c?offer_id=880&amp;aff_id=102974" rel="nofollow sponsored">
+      <span class="spark">✦</span>Reveal my reward <span class="arrow">→</span>
+    </a>
+
+    <div id="eligibility-status" class="claimed">
+      <span class="dot"></span>Checking availability...
+    </div>
+  </section>
+
+  <section class="works">
+    <div class="works-title">HOW IT WORKS</div>
+    <div class="step"><div class="num">1</div><div class="step-text">Tap the button above ↑</div></div>
+    <div class="step"><div class="num">2</div><div class="step-text">Enter your email to continue</div></div>
+    <div class="step"><div class="num">3</div><div class="step-text">More deals you do, the more you earn</div></div>
+  </section>
+
+  <section class="stats">
+    <div class="stat"><strong>28,400+</strong><p>rewards redeemed to date</p></div>
+    <div class="stat"><strong>4.8 / 5</strong><p>from 9,200 verified members</p></div>
+  </section>
+
+  <div class="members">
+    <div class="avatars">
+      <div class="avatar a1">M</div><div class="avatar a2">J</div><div class="avatar a3">R</div>
+      <div class="avatar a4">AI</div><div class="avatar a5">N</div><div class="avatar a6">+9k</div>
+    </div>
+    <div class="member-copy">Marcus, Jasmine, Nina + 9,200 members<br>already claimed</div>
+  </div>
+
+  <div class="disclaimer">Rewards capped per account. Terms apply.</div>
+
+  <div class="bottom">
+    <a class="cta-btn" href="https://trksy.org/aff_c?offer_id=880&amp;aff_id=102974" rel="nofollow sponsored">
+      <span class="spark">✦</span>Claim my reward <span class="arrow">→</span>
+    </a>
+  </div>
+</div>
+
+<script>
+let isEligible = false;
+const ctaButtons = document.querySelectorAll('.cta-btn');
+
+ctaButtons.forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    if (!isEligible) {
+      e.preventDefault();
+    }
+  });
+});
+
+function getFlagEmoji(countryCode) {
+  if (!countryCode || countryCode.length !== 2) return '';
+  return countryCode
+    .toUpperCase()
+    .replace(/./g, char => String.fromCodePoint(char.charCodeAt(0) + 127397));
+}
+
+async function detectLocation() {
+  const endpoints = [
+    async () => {
+      const res = await fetch('https://ipwho.is/');
+      const data = await res.json();
+      if (!data.success) throw new Error();
+      return { code: data.country_code, name: data.country };
+    },
+    async () => {
+      const res = await fetch('https://get.geojs.io/v1/ip/geo.json');
+      const data = await res.json();
+      return { code: data.country_code, name: data.country };
+    },
+    async () => {
+      const res = await fetch('https://ipapi.co/json/');
+      const data = await res.json();
+      if (data.error) throw new Error();
+      return { code: data.country_code, name: data.country_name };
+    }
+  ];
+
+  for (const getGeo of endpoints) {
+    try {
+      const location = await getGeo();
+      if (location && location.code) return location;
+    } catch (err) {
+      continue;
+    }
+  }
+  throw new Error("All endpoints failed");
+}
+
+detectLocation()
+  .then(location => {
+    const code = location.code ? location.code.toUpperCase() : '';
+    const name = location.name || code;
+    const allowed = ['US', 'GB', 'CA', 'AU'];
+    const flag = getFlagEmoji(code);
+    const statusEl = document.getElementById('eligibility-status');
+
+    if (allowed.includes(code)) {
+      isEligible = true;
+      statusEl.innerHTML = `<span class="dot" style="background:#2bd966; box-shadow:0 0 0 5px rgba(43,217,102,.15)"></span>Available in ${name} ${flag}`;
+      statusEl.style.color = "#1054c9";
+    } else {
+      isEligible = false;
+      statusEl.innerHTML = `<span class="dot" style="background:#e32b38; box-shadow:0 0 0 5px rgba(227,43,56,.15)"></span>Not available in ${name} ${flag}`;
+      statusEl.style.color = "#d92532";
+    }
+  })
+  .catch(() => {
+    const statusEl = document.getElementById('eligibility-status');
+    statusEl.innerHTML = `<span class="dot"></span>Unable to determine availability`;
+  });
+</script>
+</body>
+</html>
